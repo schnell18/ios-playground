@@ -10,6 +10,7 @@
 
 @interface Card : NSObject
 @property (nonatomic, strong) NSString* contents;
+@property (nonatomic) int scorePerMatch;
 @property (nonatomic) BOOL matched;
 @property (nonatomic) BOOL chosen;
 

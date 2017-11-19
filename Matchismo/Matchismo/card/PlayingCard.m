@@ -12,6 +12,19 @@
 
 @implementation PlayingCard
 
+- (int)match:(Card *)card
+{
+    if ([card isKindOfClass:[PlayingCard class]]) {
+        if (self.suit == ((PlayingCard *)card).suit) {
+            return 2;
+        }
+        else if (self.rank == ((PlayingCard *)card).rank) {
+            return 5;
+        }
+    }
+    return 0;
+}
+
 - (NSString *)contents
 {
     return [[PlayingCard rankStrings][self.rank] stringByAppendingString:self.suit];

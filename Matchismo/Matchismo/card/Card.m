@@ -12,11 +12,22 @@
 
 @implementation Card
 
+#define DEFAULT_SCORE_PER_MATCH 10
+
+- (int)scorePerMatch
+{
+    if (!_scorePerMatch) {
+        _scorePerMatch = DEFAULT_SCORE_PER_MATCH;
+    }
+    return _scorePerMatch;
+
+}
+
 - (int) match:(Card *)card
 {
     int scores = 0;
     if (card && [self.contents isEqualToString:card.contents]) {
-        scores += 10;
+        scores += self.scorePerMatch;
     }
     return scores;
     
