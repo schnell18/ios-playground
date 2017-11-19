@@ -37,6 +37,11 @@
     return _deck;
 }
 
+- (IBAction)touchRedeal:(UIButton *)sender {
+    [self.game redeal];
+    [self updateUI];
+}
+
 - (IBAction)touchCardButton:(UIButton *)sender {
     [self.game chooseCardAtIndex:[_cardButtons indexOfObject:sender]];
     [self updateUI];
@@ -59,9 +64,7 @@
             [button setBackgroundImage:[UIImage imageNamed:@"cardback"]
                               forState:UIControlStateNormal];
         }
-        if (card.matched) {
-            [button setEnabled:NO];
-        }
+        [button setEnabled:!card.matched];
     }
     self.scoreLabel.text = [NSString stringWithFormat:@"Scores: %d", self.game.score];
 }

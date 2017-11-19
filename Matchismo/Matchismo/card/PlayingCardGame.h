@@ -11,6 +11,7 @@
 
 @interface PlayingCardGame : NSObject
 - (instancetype)initWithCardCount:(NSUInteger)count usingDeck:(Deck *)deck;
+- (void)redeal;
 - (void)chooseCardAtIndex:(NSUInteger)index;
 - (Card *)cardAtIndex:(NSUInteger)index;
 @property (nonatomic, readonly) int score;

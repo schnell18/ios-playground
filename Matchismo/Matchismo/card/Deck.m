@@ -51,4 +51,9 @@
     return card;
 }
 
+- (void)redeal
+{
+    [_cards removeAllObjects];
+}
+
 @end

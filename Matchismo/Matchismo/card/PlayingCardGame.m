@@ -14,11 +14,13 @@
 @interface PlayingCardGame()
 @property (nonatomic, readwrite) int score;
 @property (nonatomic, strong) NSMutableArray *cards; //of card
+@property (nonatomic) NSUInteger cardCount;
+@property (nonatomic, strong) Deck *deck;
 @end
 
 @implementation PlayingCardGame
 
-#define MISMATCH_PENALTY 5
+#define MISMATCH_PENALTY 1
 
 - (NSMutableArray *)cards
 {
@@ -27,15 +29,27 @@
     }
     return _cards;
 }
+
 - (instancetype)initWithCardCount:(NSUInteger)count usingDeck:(Deck *)deck
 {
     self = [super init];
     if (self) {
-        for (int i = 0; i < count; i++) {
-            self.cards[i] = [deck drawRandomCard];
-        }
+        _cardCount = count;
+        _deck = deck;
+        [self redeal];
     }
     return self;
+}
+
+- (void)redeal
+{
+    if (_deck) {
+        [_deck redeal];
+        for (int i = 0; i < _cardCount; i++) {
+            self.cards[i] = [_deck drawRandomCard];
+        }
+        self.score = 0;
+    }
 }
 
 - (void)chooseCardAtIndex:(NSUInteger)index
