@@ -16,6 +16,7 @@
 @property (strong, nonatomic) PlayingCardGame *game;
 @property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *cardButtons;
 @property (weak, nonatomic) IBOutlet UILabel *scoreLabel;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *matchModeSwitch;
 @end
 
 @implementation ViewController
@@ -37,14 +38,20 @@
     return _deck;
 }
 
+- (IBAction)touchMatchModeSwitch:(UISegmentedControl *)sender {
+    self.game.matchingCardCount = [sender selectedSegmentIndex] + 2;
+}
+
 - (IBAction)touchRedeal:(UIButton *)sender {
     [self.game redeal];
     [self updateUI];
+    _matchModeSwitch.enabled = YES;
 }
 
 - (IBAction)touchCardButton:(UIButton *)sender {
     [self.game chooseCardAtIndex:[_cardButtons indexOfObject:sender]];
     [self updateUI];
+    _matchModeSwitch.enabled = NO;
 }
 
 - (void)updateUI

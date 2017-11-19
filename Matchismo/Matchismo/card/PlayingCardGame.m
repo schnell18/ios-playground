@@ -54,6 +54,16 @@
 
 - (void)chooseCardAtIndex:(NSUInteger)index
 {
+    if (self.matchingCardCount == 3) {
+        [self threeCardMatching:index];
+    }
+    else {
+        [self twoCardMatching:index];
+    }
+}
+
+- (void)twoCardMatching:(NSUInteger)index
+{
     Card *picked = [self cardAtIndex:index];
     if (!picked.matched) {
         if (!picked.chosen) {
@@ -77,6 +87,51 @@
                     otherCard.chosen = NO;
                 }
                 break;
+            }
+        }
+    }
+}
+
+- (void)threeCardMatching:(NSUInteger)index
+{
+    Card *picked = [self cardAtIndex:index];
+    if (!picked.matched) {
+        if (!picked.chosen) {
+            picked.chosen = YES;
+        }
+        for (int i = 0; i < [self.cards count]; i ++) {
+            // skip current picked card
+            if (i == index) {
+                continue;
+            }
+            Card *otherCard1 = [self cardAtIndex:i];
+            for (int j = 0; j < [self.cards count]; j ++) {
+                // skip current picked card
+                if (j == index || j == i) {
+                    continue;
+                }
+                Card *otherCard2 = [self cardAtIndex:j];
+                if (otherCard1.chosen
+                    && !otherCard1.matched
+                    && otherCard2.chosen
+                    && !otherCard2.matched) {
+                    int score = [picked matchAny:@[otherCard1, otherCard2]];
+                    if (score <= 0) {
+                        score = [otherCard1 matchAny:@[picked, otherCard2]];
+                    }
+                    if (score > 0) {
+                        picked.matched = YES;
+                        otherCard1.matched = YES;
+                        otherCard2.matched = YES;
+                        self.score += score;
+                    }
+                    else {
+                        self.score -= MISMATCH_PENALTY;
+                        otherCard1.chosen = NO;
+                        otherCard2.chosen = NO;
+                    }
+                    break;
+                }
             }
         }
     }
