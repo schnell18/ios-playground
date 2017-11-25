@@ -8,13 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		D089047A1FC3239C008D0C20 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D08904791FC3239C008D0C20 /* AppDelegate.m */; };
-		D089047D1FC3239C008D0C20 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D089047C1FC3239C008D0C20 /* ViewController.m */; };
+		D089047D1FC3239C008D0C20 /* AttrViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D089047C1FC3239C008D0C20 /* AttrViewController.m */; };
 		D08904801FC3239C008D0C20 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D089047E1FC3239C008D0C20 /* Main.storyboard */; };
 		D08904821FC3239C008D0C20 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D08904811FC3239C008D0C20 /* Assets.xcassets */; };
 		D08904851FC3239C008D0C20 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D08904831FC3239C008D0C20 /* LaunchScreen.storyboard */; };
 		D08904881FC3239C008D0C20 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D08904871FC3239C008D0C20 /* main.m */; };
 		D08904921FC3239C008D0C20 /* ActubutorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D08904911FC3239C008D0C20 /* ActubutorTests.m */; };
 		D089049D1FC3239C008D0C20 /* ActubutorUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = D089049C1FC3239C008D0C20 /* ActubutorUITests.m */; };
+		D0CDCE611FC72F7000D4BE80 /* TextStatusViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0CDCE601FC72F7000D4BE80 /* TextStatusViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,8 +39,8 @@
 		D08904751FC3239C008D0C20 /* Actubutor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Actubutor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D08904781FC3239C008D0C20 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D08904791FC3239C008D0C20 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		D089047B1FC3239C008D0C20 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		D089047C1FC3239C008D0C20 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		D089047B1FC3239C008D0C20 /* AttrViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AttrViewController.h; sourceTree = "<group>"; };
+		D089047C1FC3239C008D0C20 /* AttrViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AttrViewController.m; sourceTree = "<group>"; };
 		D089047F1FC3239C008D0C20 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D08904811FC3239C008D0C20 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D08904841FC3239C008D0C20 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,6 +52,8 @@
 		D08904981FC3239C008D0C20 /* ActubutorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ActubutorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D089049C1FC3239C008D0C20 /* ActubutorUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ActubutorUITests.m; sourceTree = "<group>"; };
 		D089049E1FC3239C008D0C20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D0CDCE5F1FC72ED600D4BE80 /* TextStatusViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TextStatusViewController.h; sourceTree = "<group>"; };
+		D0CDCE601FC72F7000D4BE80 /* TextStatusViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TextStatusViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,10 +104,12 @@
 		D08904771FC3239C008D0C20 /* Actubutor */ = {
 			isa = PBXGroup;
 			children = (
+				D0CDCE5F1FC72ED600D4BE80 /* TextStatusViewController.h */,
+				D0CDCE601FC72F7000D4BE80 /* TextStatusViewController.m */,
 				D08904781FC3239C008D0C20 /* AppDelegate.h */,
 				D08904791FC3239C008D0C20 /* AppDelegate.m */,
-				D089047B1FC3239C008D0C20 /* ViewController.h */,
-				D089047C1FC3239C008D0C20 /* ViewController.m */,
+				D089047B1FC3239C008D0C20 /* AttrViewController.h */,
+				D089047C1FC3239C008D0C20 /* AttrViewController.m */,
 				D089047E1FC3239C008D0C20 /* Main.storyboard */,
 				D08904811FC3239C008D0C20 /* Assets.xcassets */,
 				D08904831FC3239C008D0C20 /* LaunchScreen.storyboard */,
@@ -265,7 +270,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D089047D1FC3239C008D0C20 /* ViewController.m in Sources */,
+				D089047D1FC3239C008D0C20 /* AttrViewController.m in Sources */,
+				D0CDCE611FC72F7000D4BE80 /* TextStatusViewController.m in Sources */,
 				D08904881FC3239C008D0C20 /* main.m in Sources */,
 				D089047A1FC3239C008D0C20 /* AppDelegate.m in Sources */,
 			);

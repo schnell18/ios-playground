@@ -7,16 +7,17 @@
 //
 
 
-#import "ViewController.h"
+#import "AttrViewController.h"
+#import "TextStatusViewController.h"
 
-@interface ViewController ()
+@interface AttrViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *headLabel;
 @property (weak, nonatomic) IBOutlet UITextView *body;
 @property (weak, nonatomic) IBOutlet UIButton *outlineButton;
 
 @end
 
-@implementation ViewController
+@implementation AttrViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -44,6 +45,16 @@
     [[NSNotificationCenter defaultCenter] removeObserver:self
                                                  name:UIContentSizeCategoryDidChangeNotification
                                                object:nil];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"analyzeText"]) {
+        if ([segue.destinationViewController isKindOfClass:[TextStatusViewController class]]) {
+            TextStatusViewController *tsvc = (TextStatusViewController *)segue.destinationViewController;
+            tsvc.textToAnalyze = self.body.textStorage;
+        }
+    }
 }
 
 - (void) preferredFontChanged
