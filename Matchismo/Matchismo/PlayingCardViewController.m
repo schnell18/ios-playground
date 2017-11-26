@@ -7,19 +7,18 @@
 //
 
 
-#import "ViewController.h"
+#import "PlayingCardViewController.h"
 #import "PlayingCardDeck.h"
 #import "PlayingCardGame.h"
 
-@interface ViewController ()
+@interface PlayingCardViewController ()
 @property (strong, nonatomic) Deck *deck;
 @property (strong, nonatomic) PlayingCardGame *game;
-@property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *cardButtons;
+@property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *pcvcCardButtons;
 @property (weak, nonatomic) IBOutlet UILabel *scoreLabel;
-@property (weak, nonatomic) IBOutlet UISegmentedControl *matchModeSwitch;
 @end
 
-@implementation ViewController
+@implementation PlayingCardViewController
 
 - (PlayingCardGame *)game
 {
@@ -45,19 +44,17 @@
 - (IBAction)touchRedeal:(UIButton *)sender {
     [self.game redeal];
     [self updateUI];
-    _matchModeSwitch.enabled = YES;
 }
 
 - (IBAction)touchCardButton:(UIButton *)sender {
-    [self.game chooseCardAtIndex:[_cardButtons indexOfObject:sender]];
+    [self.game chooseCardAtIndex:[self.pcvcCardButtons indexOfObject:sender]];
     [self updateUI];
-    _matchModeSwitch.enabled = NO;
 }
 
 - (void)updateUI
 {
-    for (int i = 0; i < [_cardButtons count]; i ++) {
-        UIButton *button = _cardButtons[i];
+    for (int i = 0; i < [self.pcvcCardButtons count]; i ++) {
+        UIButton *button = self.pcvcCardButtons[i];
         Card *card = [self.game cardAtIndex:i];
         if (card.chosen) {
             [button setTitle:card.contents

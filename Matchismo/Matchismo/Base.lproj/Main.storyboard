@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="95a-4v-wPG">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,38 +10,16 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--2-card-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="PlayingCardViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dra-nb-YQH">
-                                <rect key="frame" x="315" y="617" width="43" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="redeal">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="touchRedeal:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lG4-20-Dp4"/>
-                                </connections>
-                            </button>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="2dZ-oX-Ozu">
-                                <rect key="frame" x="16" y="619" width="121" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <segments>
-                                    <segment title="2-card"/>
-                                    <segment title="3-card"/>
-                                </segments>
-                                <color key="tintColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
-                                <connections>
-                                    <action selector="touchMatchModeSwitch:" destination="BYZ-38-t0r" eventType="valueChanged" id="t6T-OI-j0N"/>
-                                </connections>
-                            </segmentedControl>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CLt-ay-NcK">
-                                <rect key="frame" x="19" y="70" width="68" height="89"/>
+                                <rect key="frame" x="31" y="108" width="68" height="89"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="cardback">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -51,7 +29,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GRr-7E-IJI">
-                                <rect key="frame" x="113" y="70" width="68" height="89"/>
+                                <rect key="frame" x="116" y="108" width="68" height="89"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="cardback">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -61,7 +39,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="55b-U7-FgM">
-                                <rect key="frame" x="202" y="70" width="68" height="89"/>
+                                <rect key="frame" x="205" y="108" width="68" height="89"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="cardback">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -71,7 +49,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aLb-c8-yQG">
-                                <rect key="frame" x="288" y="70" width="68" height="89"/>
+                                <rect key="frame" x="291" y="108" width="68" height="89"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="cardback">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -81,7 +59,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hXc-Yw-6nT">
-                                <rect key="frame" x="19" y="175" width="68" height="89"/>
+                                <rect key="frame" x="31" y="213" width="68" height="89"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="cardback">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -91,7 +69,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PRd-g9-cqO">
-                                <rect key="frame" x="113" y="175" width="68" height="89"/>
+                                <rect key="frame" x="116" y="213" width="68" height="89"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="cardback">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -101,7 +79,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5rr-Cd-wfB">
-                                <rect key="frame" x="202" y="175" width="68" height="89"/>
+                                <rect key="frame" x="205" y="213" width="68" height="89"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="cardback">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -111,7 +89,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Use-I1-rcy">
-                                <rect key="frame" x="288" y="175" width="68" height="89"/>
+                                <rect key="frame" x="291" y="213" width="68" height="89"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="cardback">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -121,7 +99,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5t4-dr-UFk">
-                                <rect key="frame" x="19" y="287" width="68" height="89"/>
+                                <rect key="frame" x="31" y="325" width="68" height="89"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="cardback">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -131,7 +109,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hcr-kr-rmn">
-                                <rect key="frame" x="113" y="287" width="68" height="89"/>
+                                <rect key="frame" x="116" y="325" width="68" height="89"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="cardback">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -141,7 +119,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bEd-t1-Ezz">
-                                <rect key="frame" x="202" y="287" width="68" height="89"/>
+                                <rect key="frame" x="205" y="325" width="68" height="89"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="cardback">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -151,7 +129,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7aa-gI-h1a">
-                                <rect key="frame" x="288" y="287" width="68" height="89"/>
+                                <rect key="frame" x="291" y="325" width="68" height="89"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="cardback">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -161,7 +139,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LTN-GJ-4eQ">
-                                <rect key="frame" x="19" y="393" width="68" height="89"/>
+                                <rect key="frame" x="31" y="431" width="68" height="89"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="cardback">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -171,7 +149,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7P7-Zr-Chh">
-                                <rect key="frame" x="113" y="393" width="68" height="89"/>
+                                <rect key="frame" x="116" y="431" width="68" height="89"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="cardback">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -181,7 +159,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vev-J0-FT1">
-                                <rect key="frame" x="202" y="393" width="68" height="89"/>
+                                <rect key="frame" x="205" y="431" width="68" height="89"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="cardback">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -191,7 +169,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4lE-Ce-Bar">
-                                <rect key="frame" x="288" y="393" width="68" height="89"/>
+                                <rect key="frame" x="291" y="431" width="68" height="89"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="cardback">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -201,43 +179,244 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Scores: 0       " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uRD-Lv-vGF">
-                                <rect key="frame" x="19" y="41" width="120" height="21"/>
+                                <rect key="frame" x="22" y="79" width="120" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dra-nb-YQH">
+                                <rect key="frame" x="274" y="564" width="85" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="redeal">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="touchRedeal:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lG4-20-Dp4"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="8.3439022819999998e-05" green="0.56100226679999998" blue="0.0001294425077" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="2-card" image="flag" id="eub-Ee-5bm"/>
                     <connections>
-                        <outlet property="matchModeSwitch" destination="2dZ-oX-Ozu" id="Bb3-d4-5ZN"/>
                         <outlet property="scoreLabel" destination="uRD-Lv-vGF" id="5fu-ww-Nsf"/>
-                        <outletCollection property="cardButtons" destination="CLt-ay-NcK" id="hzv-Fh-Aw8"/>
-                        <outletCollection property="cardButtons" destination="aLb-c8-yQG" id="zXA-En-acG"/>
-                        <outletCollection property="cardButtons" destination="55b-U7-FgM" id="daa-KS-TNc"/>
-                        <outletCollection property="cardButtons" destination="GRr-7E-IJI" id="Q4j-Ca-2WF"/>
-                        <outletCollection property="cardButtons" destination="hXc-Yw-6nT" id="9I3-nb-rj4"/>
-                        <outletCollection property="cardButtons" destination="PRd-g9-cqO" id="8Wd-Bt-FWJ"/>
-                        <outletCollection property="cardButtons" destination="5rr-Cd-wfB" id="xwB-hu-t3W"/>
-                        <outletCollection property="cardButtons" destination="Use-I1-rcy" id="Pj8-PF-AKM"/>
-                        <outletCollection property="cardButtons" destination="5t4-dr-UFk" id="f8o-YT-nsq"/>
-                        <outletCollection property="cardButtons" destination="hcr-kr-rmn" id="64w-43-IPU"/>
-                        <outletCollection property="cardButtons" destination="bEd-t1-Ezz" id="5ir-NR-rrT"/>
-                        <outletCollection property="cardButtons" destination="7aa-gI-h1a" id="Alg-Sf-w4V"/>
-                        <outletCollection property="cardButtons" destination="LTN-GJ-4eQ" id="CFX-jF-XNH"/>
-                        <outletCollection property="cardButtons" destination="7P7-Zr-Chh" id="N1z-zu-Dw5"/>
-                        <outletCollection property="cardButtons" destination="Vev-J0-FT1" id="o5p-HG-Cdu"/>
-                        <outletCollection property="cardButtons" destination="4lE-Ce-Bar" id="aMC-p8-jc0"/>
+                        <outletCollection property="pcvcCardButtons" destination="CLt-ay-NcK" id="wna-NA-Ke0"/>
+                        <outletCollection property="pcvcCardButtons" destination="hXc-Yw-6nT" id="esx-Dw-NBj"/>
+                        <outletCollection property="pcvcCardButtons" destination="5t4-dr-UFk" id="GpT-SX-I6k"/>
+                        <outletCollection property="pcvcCardButtons" destination="LTN-GJ-4eQ" id="L2S-Ws-z0E"/>
+                        <outletCollection property="pcvcCardButtons" destination="GRr-7E-IJI" id="Arx-Cy-mBA"/>
+                        <outletCollection property="pcvcCardButtons" destination="PRd-g9-cqO" id="Qri-iZ-tIm"/>
+                        <outletCollection property="pcvcCardButtons" destination="hcr-kr-rmn" id="Tf3-p3-03O"/>
+                        <outletCollection property="pcvcCardButtons" destination="7P7-Zr-Chh" id="Wio-Q0-yg0"/>
+                        <outletCollection property="pcvcCardButtons" destination="55b-U7-FgM" id="Vxe-nB-ZP0"/>
+                        <outletCollection property="pcvcCardButtons" destination="5rr-Cd-wfB" id="ILV-Km-gzV"/>
+                        <outletCollection property="pcvcCardButtons" destination="bEd-t1-Ezz" id="AxI-xN-mTQ"/>
+                        <outletCollection property="pcvcCardButtons" destination="Vev-J0-FT1" id="HCt-Vg-yFA"/>
+                        <outletCollection property="pcvcCardButtons" destination="aLb-c8-yQG" id="S3Z-GX-zWc"/>
+                        <outletCollection property="pcvcCardButtons" destination="Use-I1-rcy" id="cEI-hd-O1u"/>
+                        <outletCollection property="pcvcCardButtons" destination="7aa-gI-h1a" id="CWq-M3-RL5"/>
+                        <outletCollection property="pcvcCardButtons" destination="4lE-Ce-Bar" id="2BO-ob-aqS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="72.799999999999997" y="38.23088455772114"/>
+            <point key="canvasLocation" x="1261.5999999999999" y="-624.73763118440786"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="lbA-j6-Rfv">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="95a-4v-wPG" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Jre-ZV-iS6">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="SnW-19-fkU" kind="relationship" relationship="viewControllers" id="54h-m6-UOU"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="iTA-kt-k0Y"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BE1-Pk-2xe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-218" y="-460"/>
+        </scene>
+        <!--Set-Game-->
+        <scene sceneID="I9y-rq-cVa">
+            <objects>
+                <viewController id="SnW-19-fkU" customClass="SetGameViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="061-tD-EPw">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XYR-d6-t5f">
+                                <rect key="frame" x="22" y="108" width="68" height="89"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="cardfront">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="touchButton:" destination="SnW-19-fkU" eventType="touchUpInside" id="DsG-PC-AZy"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g3u-o6-1Bn">
+                                <rect key="frame" x="116" y="108" width="68" height="89"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="cardfront">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="touchButton:" destination="SnW-19-fkU" eventType="touchUpInside" id="QBw-bJ-AMd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zpk-IL-v5g">
+                                <rect key="frame" x="205" y="108" width="68" height="89"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="cardfront">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="touchButton:" destination="SnW-19-fkU" eventType="touchUpInside" id="kQk-p7-lKO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QQP-76-r0m">
+                                <rect key="frame" x="291" y="108" width="68" height="89"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="cardfront">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="touchButton:" destination="SnW-19-fkU" eventType="touchUpInside" id="b0U-Mh-UhB"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mx2-Cc-KE1">
+                                <rect key="frame" x="22" y="213" width="68" height="89"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="cardfront">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="touchButton:" destination="SnW-19-fkU" eventType="touchUpInside" id="aYR-mj-VPU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oau-df-CaA">
+                                <rect key="frame" x="116" y="213" width="68" height="89"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="cardfront">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="touchButton:" destination="SnW-19-fkU" eventType="touchUpInside" id="Wb9-9t-cyl"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SWp-aC-gql">
+                                <rect key="frame" x="205" y="213" width="68" height="89"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="cardfront">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="touchButton:" destination="SnW-19-fkU" eventType="touchUpInside" id="8Qf-4S-ifX"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ccR-MS-9UA">
+                                <rect key="frame" x="291" y="213" width="68" height="89"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="cardfront">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="touchButton:" destination="SnW-19-fkU" eventType="touchUpInside" id="JFx-v9-x5Q"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oGM-jI-2vZ">
+                                <rect key="frame" x="22" y="325" width="68" height="89"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="cardfront">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="touchButton:" destination="SnW-19-fkU" eventType="touchUpInside" id="4m6-Oo-IJQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iUd-ql-bMP">
+                                <rect key="frame" x="116" y="325" width="68" height="89"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="cardfront">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="touchButton:" destination="SnW-19-fkU" eventType="touchUpInside" id="T3G-Kr-bZo"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="clF-ru-cY5">
+                                <rect key="frame" x="205" y="325" width="68" height="89"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="cardfront">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="touchButton:" destination="SnW-19-fkU" eventType="touchUpInside" id="F7W-1W-H0H"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="odf-Tf-0My">
+                                <rect key="frame" x="291" y="325" width="68" height="89"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="cardfront">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="touchButton:" destination="SnW-19-fkU" eventType="touchUpInside" id="hhi-Fm-bTC"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Scores: 0       " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fqy-l9-daY">
+                                <rect key="frame" x="22" y="79" width="120" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e3I-wf-KwP">
+                                <rect key="frame" x="217" y="536" width="142" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="redeal">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="touchRedeal:" destination="SnW-19-fkU" eventType="touchUpInside" id="6BK-zt-zdX"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="8.3439022819999998e-05" green="0.56100226679999998" blue="0.0001294425077" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="BXH-zc-YLF"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Set-Game" image="crown" id="Szu-lo-Jjy"/>
+                    <connections>
+                        <outlet property="scoreLabel" destination="fqy-l9-daY" id="Mek-R3-Uih"/>
+                        <outletCollection property="sgvcCardButtons" destination="QQP-76-r0m" id="YqL-tl-Ocg"/>
+                        <outletCollection property="sgvcCardButtons" destination="Zpk-IL-v5g" id="9Sk-HS-HO1"/>
+                        <outletCollection property="sgvcCardButtons" destination="g3u-o6-1Bn" id="6bv-gv-tzS"/>
+                        <outletCollection property="sgvcCardButtons" destination="XYR-d6-t5f" id="ASy-BI-CTk"/>
+                        <outletCollection property="sgvcCardButtons" destination="mx2-Cc-KE1" id="5RL-ia-xbq"/>
+                        <outletCollection property="sgvcCardButtons" destination="Oau-df-CaA" id="8wS-ZA-2P0"/>
+                        <outletCollection property="sgvcCardButtons" destination="SWp-aC-gql" id="YoG-ce-SxF"/>
+                        <outletCollection property="sgvcCardButtons" destination="ccR-MS-9UA" id="2dP-p4-2Df"/>
+                        <outletCollection property="sgvcCardButtons" destination="oGM-jI-2vZ" id="UXe-If-mhH"/>
+                        <outletCollection property="sgvcCardButtons" destination="iUd-ql-bMP" id="GTs-VZ-XKL"/>
+                        <outletCollection property="sgvcCardButtons" destination="clF-ru-cY5" id="yOF-Md-pMA"/>
+                        <outletCollection property="sgvcCardButtons" destination="odf-Tf-0My" id="JdN-G6-0WG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="K5X-TR-6En" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1280.8" y="305.39730134932535"/>
         </scene>
     </scenes>
     <resources>
         <image name="cardback" width="64" height="96"/>
+        <image name="cardfront" width="64" height="96"/>
+        <image name="crown" width="30" height="30"/>
+        <image name="flag" width="30" height="30"/>
     </resources>
 </document>
