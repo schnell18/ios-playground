@@ -26,6 +26,7 @@
                            NSStrokeColorAttributeName : self.outlineButton.tintColor
                            } range:NSMakeRange(0, [title length])];
     [self.outlineButton setAttributedTitle:title forState:UIControlStateNormal];
+    CGContextSaveGState(<#CGContextRef  _Nullable c#>)
 
 }
 
