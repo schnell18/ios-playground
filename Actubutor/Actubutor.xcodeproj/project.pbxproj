@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		52F2678FD830E298A73A682B /* libPods-Actubutor.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C3A18E08BD162A476DB93E12 /* libPods-Actubutor.a */; };
 		D089047A1FC3239C008D0C20 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D08904791FC3239C008D0C20 /* AppDelegate.m */; };
 		D089047D1FC3239C008D0C20 /* AttrViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D089047C1FC3239C008D0C20 /* AttrViewController.m */; };
 		D08904801FC3239C008D0C20 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D089047E1FC3239C008D0C20 /* Main.storyboard */; };
@@ -36,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C3A18E08BD162A476DB93E12 /* libPods-Actubutor.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Actubutor.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA554CBFA466272BE0067BEE /* Pods-Actubutor.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Actubutor.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Actubutor/Pods-Actubutor.debug.xcconfig"; sourceTree = "<group>"; };
 		D08904751FC3239C008D0C20 /* Actubutor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Actubutor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D08904781FC3239C008D0C20 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D08904791FC3239C008D0C20 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -54,6 +57,7 @@
 		D089049E1FC3239C008D0C20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D0CDCE5F1FC72ED600D4BE80 /* TextStatusViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TextStatusViewController.h; sourceTree = "<group>"; };
 		D0CDCE601FC72F7000D4BE80 /* TextStatusViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TextStatusViewController.m; sourceTree = "<group>"; };
+		D5771F550EAEA4A096423D1A /* Pods-Actubutor.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Actubutor.release.xcconfig"; path = "Pods/Target Support Files/Pods-Actubutor/Pods-Actubutor.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52F2678FD830E298A73A682B /* libPods-Actubutor.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +86,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4A2A83633FBDBA87EBBB8BB8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C3A18E08BD162A476DB93E12 /* libPods-Actubutor.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9EC2893EE22556341CEB6927 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CA554CBFA466272BE0067BEE /* Pods-Actubutor.debug.xcconfig */,
+				D5771F550EAEA4A096423D1A /* Pods-Actubutor.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		D089046C1FC3239C008D0C20 = {
 			isa = PBXGroup;
 			children = (
@@ -88,6 +110,8 @@
 				D08904901FC3239C008D0C20 /* ActubutorTests */,
 				D089049B1FC3239C008D0C20 /* ActubutorUITests */,
 				D08904761FC3239C008D0C20 /* Products */,
+				9EC2893EE22556341CEB6927 /* Pods */,
+				4A2A83633FBDBA87EBBB8BB8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -144,9 +168,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D08904A11FC3239C008D0C20 /* Build configuration list for PBXNativeTarget "Actubutor" */;
 			buildPhases = (
+				FA805DC79F0C41016E7EE617 /* [CP] Check Pods Manifest.lock */,
 				D08904711FC3239C008D0C20 /* Sources */,
 				D08904721FC3239C008D0C20 /* Frameworks */,
 				D08904731FC3239C008D0C20 /* Resources */,
+				F911BE2683486AC94470ABC9 /* [CP] Embed Pods Frameworks */,
+				6294FF1E2381D73B8949262B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -264,6 +291,57 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6294FF1E2381D73B8949262B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Actubutor/Pods-Actubutor-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F911BE2683486AC94470ABC9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Actubutor/Pods-Actubutor-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FA805DC79F0C41016E7EE617 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Actubutor-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D08904711FC3239C008D0C20 /* Sources */ = {
@@ -434,6 +512,7 @@
 		};
 		D08904A21FC3239C008D0C20 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CA554CBFA466272BE0067BEE /* Pods-Actubutor.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -447,6 +526,7 @@
 		};
 		D08904A31FC3239C008D0C20 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D5771F550EAEA4A096423D1A /* Pods-Actubutor.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

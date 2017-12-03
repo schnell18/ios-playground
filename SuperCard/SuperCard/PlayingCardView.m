@@ -9,9 +9,30 @@
 
 #import "PlayingCardView.h"
 
+@interface PlayingCardView()
+@property (nonatomic) CGFloat faceCardScaleFactor;
+@end
+
 @implementation PlayingCardView
 
+@synthesize faceCardScaleFactor = _faceCardScaleFactor;
+#define DEFAULT_FACE_CARD_SCALE_FACTOR 0.80
+
 #pragma mark - Properties
+- (CGFloat)faceCardScaleFactor
+{
+    if (!_faceCardScaleFactor) {
+        _faceCardScaleFactor = DEFAULT_FACE_CARD_SCALE_FACTOR;
+    }
+    return _faceCardScaleFactor;
+}
+
+- (void)setFaceCardScaleFactor:(CGFloat)faceCardScaleFactor
+{
+    _faceCardScaleFactor = faceCardScaleFactor;
+    [self setNeedsDisplay];
+}
+
 - (void)setSuit:(NSString *)suit
 {
     _suit = suit;
@@ -41,8 +62,8 @@
 }
 
 #pragma mark - Initialization
-#define CORNER_FONT_STANDARD_HEIGHT 100.0
-#define CORNER_RADIUS 9.0
+#define CORNER_FONT_STANDARD_HEIGHT 120.0
+#define CORNER_RADIUS 12.0
 
 - (CGFloat)cornerScaleFactor
 {
@@ -67,8 +88,36 @@
     UIRectFill(self.bounds);
     [[UIColor blackColor] setStroke];
     [roundedRect stroke];
+    
+    if (self.faceUp) {
+        UIImage *faceImage =  [UIImage imageNamed:[NSString stringWithFormat:@"%@%@", [self rankAsString], self.suit]];
+        if (faceImage) {
+            CGRect imageRect = CGRectInset(self.bounds,
+                                           self.bounds.size.width * (1.0-self.faceCardScaleFactor),
+                                           self.bounds.size.height * (1.0-self.faceCardScaleFactor));
+            CGRect imageFrame = CGRectInset(self.bounds,
+                                            self.bounds.size.width * (1.0-self.faceCardScaleFactor) - 2,
+                                            self.bounds.size.height * (1.0-self.faceCardScaleFactor) - 2);
+            UIBezierPath *frame = [UIBezierPath bezierPathWithRect:imageFrame];
+            [[UIColor blackColor] setStroke];
+            [frame stroke];
+            [faceImage drawInRect:imageRect];
+        }
+        else {
+            [self drawPips];
+        }
 
-    [self drawCorners];
+        [self drawCorners];
+    }
+    else {
+        UIImage *backImage =  [UIImage imageNamed:@"cardback"];
+        [backImage drawInRect:self.bounds];
+    }
+}
+    
+
+- (void)drawPips
+{
 }
 
 - (void)drawCorners
@@ -79,9 +128,9 @@
     UIFont *cornerFont = [UIFont preferredFontForTextStyle:UIFontTextStyleBody];
     cornerFont = [cornerFont fontWithSize:cornerFont.pointSize * [self cornerScaleFactor]];
     NSAttributedString *cornerText = [[NSAttributedString alloc] initWithString:[NSString stringWithFormat:@"%@\n%@", [self rankAsString], self.suit] attributes: @{
-                                                                                                 NSFontAttributeName: cornerFont,
-                                                                                                 NSParagraphStyleAttributeName: paragraphStyle
-                                                                                                 }];
+                                                      NSFontAttributeName: cornerFont,
+                                                      NSParagraphStyleAttributeName: paragraphStyle
+                                                      }];
     CGRect textBounds;
     textBounds.origin = CGPointMake([self cornerOffset], [self cornerOffset]);
     textBounds.size = [cornerText size];

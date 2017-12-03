@@ -11,7 +11,7 @@
 #import "PlayingCardView.h"
 
 @interface ViewController ()
-@property (weak, nonatomic) IBOutlet PlayingCardView *playingCardView;
+@property (strong, nonatomic) IBOutletCollection(PlayingCardView) NSArray *cards;
 
 @end
 
@@ -19,15 +19,20 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.playingCardView.suit = @"♥️";
-    self.playingCardView.rank = 13;
+    NSArray *suits = @[@"♠", @"♥", @"♣", @"♦"];
+    NSUInteger idx = 0;
+    for (id card in self.cards) {
+        PlayingCardView *pc = (PlayingCardView*)card;
+        pc.suit = suits[idx++ % [suits count]];
+        //pc.suit = @"♥";
+        pc.rank = 11;
+        pc.faceUp = YES;
+    }
 }
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
 
 @end
